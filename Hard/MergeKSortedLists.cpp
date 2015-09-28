@@ -8,11 +8,22 @@
  */
 class Solution {
 public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        // Use dummyHead to simply code
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        if (lists.size() == 0) return NULL;
+        int k = lists.size();
+        while (k > 1) {
+            for (int i = 0; i < k / 2; i++) {
+                lists[i] = merge2Lists(lists[i], lists[k - 1 - i]);
+            }
+            k = (k + 1) / 2;
+        }
+        return lists[0];
+    }
+    
+    ListNode* merge2Lists(ListNode* l1, ListNode* l2) {
         ListNode* dummyHead = new ListNode(0);
         ListNode* cur = dummyHead;
-        while(l1 != NULL && l2 != NULL) {
+        while (l1 != NULL && l2 != NULL) {
             if (l1->val < l2->val) {
                 cur->next = l1;
                 l1 = l1->next;
@@ -22,16 +33,10 @@ public:
             }
             cur = cur->next;
         }
-        if (l1 != NULL) {
-            cur->next = l1;
-        } else if (l2 != NULL) {
-            cur->next = l2;
-        }
+        if (l1 != NULL) cur->next = l1;
+        else if (l2 != NULL) cur->next = l2;
         ListNode* head = dummyHead->next;
         delete dummyHead;
         return head;
     }
 };
-
-// Notes:
-// To see more examples of dummy head usage, please see these questions: [21. Add Two Numbers], [22. Swap Nodes in Pairs], and [23. Merge K Sorted Linked Lists].
