@@ -1,14 +1,14 @@
 class Solution {
 public:
-    // Strategy: two pointers. 
-    vector<int> twoSum(vector<int>& nums, int target) {
+    // Strategy: two pointers
+    vector<int> twoSum(vector<int>& numbers, int target) {
         int start = 0;
-        int end = nums.size() - 1;
+        int end = numbers.size() - 1;
         while (start < end) {
-            if (nums[start] + nums[end] == target) {
-                vector<int> result = {nums[start], nums[end]};
+            if (numbers[start] + numbers[end] == target) {
+                vector<int> result = {start + 1, end + 1};
                 return result;
-            } else if (nums[start] + nums[end] > target) {
+            } else if (numbers[start] + numbers[end] > target) {
                 end--;
             } else {
                 start++;
