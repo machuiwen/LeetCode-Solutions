@@ -1,23 +1,25 @@
 class Solution {
 public:
-    // The input string does not contain leading or trailing spaces
-    // and the words are always separated by a single space.
+    // General idea: first reverse every character in the string
+    // then reverse every word.
     void reverseWords(string &s) {
+        if (s.empty()) return;
         reverse(s, 0, s.size() - 1);
-        int wordStart = 0;
+        int start = 0;
         for (int i = 0; i < s.size(); i++) {
-            if (s[i + 1] == ' ' || i == s.size() - 1) {
-                reverseWords(s, wordStart, i);
-                wordStart = i + 2;
+            if (s[i] == ' ') {
+                reverse(s, start, i - 1);
+                start = i + 1;
             }
         }
+        reverse(s, start, s.size() - 1);
     }
-
+    
     void reverse(string &s, int start, int end) {
-        while (end > start) {
-            char temp = s[start];
+        while (start < end) {
+            char c = s[start];
             s[start] = s[end];
-            s[end] = temp;
+            s[end] = c;
             start++;
             end--;
         }
