@@ -10,18 +10,15 @@ class Solution {
 public:
     ListNode* oddEvenList(ListNode* head) {
         if (head == NULL || head->next == NULL) return head;
-        ListNode* insertPosition = head;
-        ListNode* grabPosition = head->next; 
-        while (grabPosition != NULL && grabPosition->next != NULL) {
-            ListNode* insertNext = insertPosition->next;
-            ListNode* grabNode = grabPosition->next;
-            ListNode* grabNext = grabNode->next;
-            insertPosition->next = grabNode;
-            grabNode->next = insertNext;
-            grabPosition->next = grabNext;
-            insertPosition = grabNode;
-            grabPosition = grabNext;
+        ListNode* h2 = head->next;
+        ListNode* l1 = head, *l2 = h2;
+        while (l2 && l2->next) {
+            l1->next = l2->next;
+            l2->next = l2->next->next;
+            l1 = l1->next;
+            l2 = l2->next;
         }
+        l1->next = h2;
         return head;
     }
 };

@@ -9,11 +9,10 @@
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        // Use dummyHead to simply code
-        ListNode* dummyHead = new ListNode(0);
-        ListNode* cur = dummyHead;
-        while(l1 != NULL && l2 != NULL) {
-            if (l1->val < l2->val) {
+        ListNode* dummy = new ListNode(0);
+        ListNode* cur = dummy;
+        while (l1 && l2) {
+            if (l1->val <= l2->val) {
                 cur->next = l1;
                 l1 = l1->next;
             } else {
@@ -22,16 +21,13 @@ public:
             }
             cur = cur->next;
         }
-        if (l1 != NULL) {
+        if (l1) {
             cur->next = l1;
-        } else if (l2 != NULL) {
+        } else {
             cur->next = l2;
         }
-        ListNode* head = dummyHead->next;
-        delete dummyHead;
-        return head;
+        cur = dummy->next;
+        delete dummy;
+        return cur;
     }
 };
-
-// Notes:
-// To see more examples of dummy head usage, please see these questions: [21. Add Two Numbers], [22. Swap Nodes in Pairs], and [23. Merge K Sorted Linked Lists].

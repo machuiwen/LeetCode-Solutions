@@ -7,13 +7,9 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
- #include <cmath>
  
 class Solution {
 public:
-    // Notice the difference between top-down recursion and bottom-up recursion
-    // In this case, bottom-up recursion is faster, because it reduces unnecessary
-    // computation
     bool isBalanced(TreeNode* root) {
         return height(root) != -1;
     }
