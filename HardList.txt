@@ -1,0 +1,66 @@
+296	Best Meeting Point 	45.6%	Hard
+52	N-Queens II	38.3%	Hard
+302	Smallest Rectangle Enclosing Black Pixels 	37.7%	Hard
+287	Find the Duplicate Number	37.4%	Hard
+145	Binary Tree Postorder Traversal	34.5%	Hard
+265	Paint House II 	34.3%	Hard
+154	Find Minimum in Rotated Sorted Array II	33.7%	Hard
+312	Burst Balloons	33.5%	Hard
+159	Longest Substring with At Most Two Distinct Characters 	33.2%	Hard
+305	Number of Islands II 	33.1%	Hard
+291	Word Pattern II 	33.1%	Hard
+117	Populating Next Right Pointers in Each Node II	32.6%	Hard
+42	Trapping Rain Water	31.5%	Hard
+272	Closest Binary Search Tree Value II 	31.2%	Hard
+128	Longest Consecutive Sequence	31.2%	Hard
+301	Remove Invalid Parentheses	30.4%	Hard
+33	Search in Rotated Sorted Array	29.7%	Hard
+317	Shortest Distance from All Buildings 	29.6%	Hard
+315	Count of Smaller Numbers After Self	28.5%	Hard
+115	Distinct Subsequences	28.1%	Hard
+72	Edit Distance	27.9%	Hard
+25	Reverse Nodes in k-Group	26.8%	Hard
+51	N-Queens	26.2%	Hard
+164	Maximum Gap	26.0%	Hard
+138	Copy List with Random Pointer	25.9%	Hard
+87	Scramble String	25.9%	Hard
+239	Sliding Window Maximum	25.8%	Hard
+99	Recover Binary Search Tree	25.7%	Hard
+123	Best Time to Buy and Sell Stock III	25.5%	Hard
+248	Strobogrammatic Number III 	25.0%	Hard
+45	Jump Game II	24.9%	Hard
+56	Merge Intervals	24.4%	Hard
+327	Count of Range Sum	24.2%	Hard
+37	Sudoku Solver	24.0%	Hard
+84	Largest Rectangle in Histogram	23.6%	Hard
+41	First Missing Positive	23.4%	Hard
+57	Insert Interval	23.1%	Hard
+158	Read N Characters Given Read4 II - Call multiple times 	23.0%	Hard
+85	Maximal Rectangle	23.0%	Hard
+282	Expression Add Operators	22.9%	Hard
+124	Binary Tree Maximum Path Sum	22.7%	Hard
+23	Merge k Sorted Lists	22.6%	Hard
+32	Longest Valid Parentheses	22.0%	Hard
+97	Interleaving String	21.9%	Hard
+135	Candy	21.8%	Hard
+269	Alien Dictionary 	21.5%	Hard
+10	Regular Expression Matching	21.5%	Hard
+308	Range Sum Query 2D - Mutable 	21.3%	Hard
+188	Best Time to Buy and Sell Stock IV	21.2%	Hard
+132	Palindrome Partitioning II	21.2%	Hard
+295	Find Median from Data Stream	21.1%	Hard
+218	The Skyline Problem	20.9%	Hard
+76	Minimum Window Substring	20.5%	Hard
+30	Substring with Concatenation of All Words	20.4%	Hard
+174	Dungeon Game	20.0%	Hard
+321	Create Maximum Number	19.3%	Hard
+140	Word Break II	19.1%	Hard
+214	Shortest Palindrome	18.8%	Hard
+212	Word Search II	18.0%	Hard
+4	Median of Two Sorted Arrays	18.0%	Hard
+44	Wildcard Matching	16.8%	Hard
+146	LRU Cache	15.7%	Hard
+68	Text Justification	15.7%	Hard
+149	Max Points on a Line	13.9%	Hard
+126	Word Ladder II	13.5%	Hard
+65	Valid Number	11.9%	Hard

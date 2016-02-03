@@ -26,7 +26,6 @@ public:
             }
         }
         // Only when the stack is empty, return true!
-        if (myStack.empty()) return true;
-        else return false;
+        return myStack.empty();
     }
 };

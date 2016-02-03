@@ -1,7 +1,6 @@
 class Solution {
 public:
-    // Notice: then fence is not a loop. Just consider
-    // a line.
+    // Notice: the fence is not a loop. Just consider a line.
     // W(n) = Diff(n) + Same(n) - depends on the relationship of n-1 and n
     // Diff(n) = (k-1) * W(n - 1)
     // Same(n) = Diff(n - 1)
