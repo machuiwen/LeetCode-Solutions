@@ -1,3 +1,4 @@
+// Space efficient
 class MinStack {
 private:
     stack<int> mainStack;
