@@ -1,3 +1,34 @@
+// C++ solution using queue. Simple and concise.
+class ZigzagIterator {
+public:
+    ZigzagIterator(vector<int>& v1, vector<int>& v2) {
+        if (!v1.empty()) {
+            q.push(make_pair(v1.begin(), v1.end()));
+        }
+        if (!v2.empty()) {
+            q.push(make_pair(v2.begin(), v2.end()));
+        }
+    }
+
+    int next() {
+        auto p = q.front();
+        q.pop();
+        auto beginItr = p.first;
+        auto endItr = p.second;
+        if (beginItr + 1 != endItr) {
+            q.push(make_pair(beginItr + 1, endItr));
+        }
+        return *beginItr;
+    }
+
+    bool hasNext() {
+        return !q.empty();
+    }
+private:
+    queue<pair<vector<int>::iterator, vector<int>::iterator>> q;
+};
+
+// My naive solution
 class ZigzagIterator {
 public:
     ZigzagIterator(vector<int>& v1, vector<int>& v2) {

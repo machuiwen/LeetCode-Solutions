@@ -1,20 +1,19 @@
 class Solution {
 public:
     bool canWin(string s) {
-        vector<string> nextStep = generatePossibleNextMoves(s);
-        for (int i = 0; i < nextStep.size(); i++) {
-            if (!canWin(nextStep[i])) return true;
-        }
-        return false;
+        return canWinHelper(s);
     }
     
-    vector<string> generatePossibleNextMoves(string s) {
-        vector<string> result;
-        for (int i = 0; i < s.size(); i++) {
+    bool canWinHelper(string& s) {
+        for (int i = 0; i < int(s.size()) - 1; i++) {
             if (s[i] == '+' && s[i + 1] == '+') {
-                result.push_back(s.substr(0, i) + "--" + s.substr(i + 2));
+                s[i] = '-';
+                s[i + 1] = '-';
+                if (!canWin(s)) return true;
+                s[i] = '+';
+                s[i + 1] = '+';
             }
         }
-        return result;
+        return false;
     }
 };
