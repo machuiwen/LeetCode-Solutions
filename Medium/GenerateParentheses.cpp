@@ -16,12 +16,12 @@ public:
         if (left < n) {
             chosen += '(';
             generateParenthesisHelper(result, chosen, n, left + 1, right);
-            chosen = chosen.substr(0, chosen.size() - 1);
+            chosen.pop_back();
         }
         if (right < left) {
             chosen += ')';
             generateParenthesisHelper(result, chosen, n, left, right + 1);
-            chosen = chosen.substr(0, chosen.size() - 1);
+            chosen.pop_back();
         }
     }
 };

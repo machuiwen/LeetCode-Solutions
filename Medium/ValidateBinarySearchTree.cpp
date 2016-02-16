@@ -27,3 +27,29 @@ public:
         else return findMin(root->left);
     }
 };
+
+// Another implementation
+class Solution {
+public:
+    bool isValidBST(TreeNode* root) {
+        if (root == NULL) return true;
+        int Min, Max;
+        return helper(root, Min, Max);
+    }
+    
+    bool helper(TreeNode* root, int& Min, int& Max) {
+        Min = root->val;
+        Max = root->val;
+        if (root->left == NULL && root->right == NULL) {
+            return true;
+        }
+        int lMax, rMin;
+        if (root->left) {
+            if (!helper(root->left, Min, lMax) || lMax >= root->val) return false;
+        }
+        if (root->right) {
+            if (!helper(root->right, rMin, Max) || rMin <= root->val) return false;
+        }
+        return true;
+    }
+};
